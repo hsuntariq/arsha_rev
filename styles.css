@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    
+    --primary: rgb(55, 81, 126);
+    --weight: bold;
+    --animate: all 0.4s;
+    --move-up: translateY(-10px);
+}
+
+
+main{
+    background: var(--primary);
+}
+
+.para{
+    color: #A79FA1;
+}
+
+.head{
+    font-size: 3rem;
+}
+
+.main-img{
+    animation: move 1.5s linear infinite alternate-reverse ;
+}
+
+
+@keyframes move{
+    from{
+        transform: translateY(0);
+    }to{
+       transform: translateY(-20px);
+    }
+}
+
+
+.brand{
+    transition: all 0.4s;
+    filter: grayscale(100%);
+}
+
+.brand:hover{
+    filter: grayscale(0);
+}
+
+.abt{
+    color: var(--primary);
+}
+
+.gray{
+    height: 2px;
+    background: lightgray;
+    width: 10%;
+    margin: auto;
+    position: relative;
+}
+
+.blue{
+    width: 40%;
+    /* margin: auto; */
+    position: absolute;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.eum{
+    color: var(--primary);
+}
+
+
+.crd h3{
+    color: var(--primary);
+}
+
+.crd{
+    transition: all 0.5s;
+}
+
+.crd:hover{
+    transform: translateY(-20px);
+}
+
+.bg-image{
+    background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url('	https://bootstrapmade.com/demo/templates/Arsha/assets/img/cta-bg.jpg') fixed center center;
+}
+
+
+.my-btn{
+    border: 2px solid white;
+
+}
+
+
+.gallery img{
+    transition: all 0.4s;
+}
+
+.img-parent{
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery img:hover{
+    scale: 1.1;
+}
+
+
+.overlay{
+    --primary: rgba(55, 81, 126,0.6);
+    background: var(--primary);
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    color: white;
+    padding:0.4rem 1rem;
+    opacity: 0;
+    transition: var(--animate);
+    
+}
+
+
+.img-parent:hover .overlay{
+    opacity: 1;
+}
+
+
+
+.my-icons i{
+    padding:0.7rem;
+clip-path: circle();
+    background: #EFF2F8;
+    color: var(--primary);
+    transition: var(--animate);
+}
+
+.my-icons i:hover{
+    background: var(--bs-info);
+    color: white;
+}
+
+.overlay h6, .overlay p{
+    margin: 0;
+    padding: 0;
+}
+
+.my-card{
+    transition: var(--animate);
+}
+
+.my-card:hover{
+    transform: var(--move-up);
+}
+
+
+.pricing h5, .pricing h3{
+    color: var(--primary);
+}
+
+.pricing h3{
+    font-size: 3rem;
+
+}
+
+.my-crd{
+    border-top: 3px solid var(--bs-info) !important;
+}
+
+
+@media only screen and (max-width:768px) {
+    .main-img{
+        animation-play-state: paused;
+    }
+    .my-btn{
+        display: block;
+        margin-left:auto !important;
+    }
+}
